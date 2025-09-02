@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textlytics Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8fafc; }
+        .ripple { position: absolute; border-radius: 50%; background: rgba(255, 255, 255, 0.3); transform: scale(0); animation: ripple-effect 0.6s linear; }
+        @keyframes ripple-effect { to { transform: scale(4); opacity: 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+        <div class="z-10 w-full max-w-4xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl">
+            <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Textlytics Dashboard</h1>
+            
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Submit Paragraphs</h2>
+                <textarea id="text-block" class="w-full h-40 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" placeholder="Paste your text here..."></textarea>
+                <button id="submit-btn" class="ripple-btn mt-3 w-full bg-blue-500 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-600 shadow-md hover:shadow-lg transition-all duration-300">
+                    Submit Text
+                </button>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Search for a Word</h2>
+                <div class="flex items-center space-x-3">
+                    <input type="text" id="search-word" class="flex-grow border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-transparent transition" placeholder="Enter word...">
+                    <button id="search-btn" class="ripple-btn bg-green-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-600 shadow-md hover:shadow-lg transition-all duration-300">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Search Results</h2>
+                <div id="results-container" class="space-y-4 max-h-96 overflow-y-auto pr-2 bg-gray-50/50 p-4 rounded-lg border">
+                    <p id="empty-state" class="text-gray-500">Submit text and search for a word to see results.</p>
+                </div>
+            </div>
+            <button id="logout-btn" class="ripple-btn mt-8 w-full bg-red-500 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-600 shadow-md hover:shadow-lg transition-all duration-300">
+                Logout
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/static/shared.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
