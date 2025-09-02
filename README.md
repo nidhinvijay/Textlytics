@@ -4,8 +4,6 @@
 
 This project was developed as a backend assignment for Codemonk, demonstrating proficiency in modern backend architecture, system design, and DevOps practices.
 
-![Textlytics Dashboard Screenshot](path/to/your/screenshot.png) 
-*(**Action required:** Take a screenshot of your beautiful dashboard at `http://localhost:8000/app/` and replace `path/to/your/screenshot.png` with its path, or just upload it to the repo and link it.)*
 
 ---
 
