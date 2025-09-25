@@ -43,7 +43,7 @@ This project is fully containerized. The only prerequisite is to have **Docker**
 
 **1. Clone the repository:**
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/nidhinvijay/Textlytics.git
 cd codemonk-textlytics
 ```
 
